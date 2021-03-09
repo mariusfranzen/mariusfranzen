@@ -1,0 +1,24 @@
+{
+  "name": "mariusfranzen",
+  "version": "1.0.0",
+  "description": "Material UI conversion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariusfranzen/mariusfranzen.git"
+  },
+  "author": "Marius Franzén",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariusfranzen/mariusfranzen/issues"
+  },
+  "homepage": "https://github.com/mariusfranzen/mariusfranzen#readme",
+  "dependencies": {
+    "@emotion/react": "^11.1.5",
+    "@emotion/styled": "^11.1.5",
+    "@material-ui/core": "^5.0.0-alpha.27"
+  }
+}
