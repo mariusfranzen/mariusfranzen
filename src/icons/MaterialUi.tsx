@@ -14,7 +14,7 @@ interface Props {
     viewBox?: string
 }
 
-function MaterialUi({ ...rest }: Props): ReactElement {
+function MaterialUi({ color, ...rest }: Props): ReactElement {
     return (
         <SvgIcon
             {...rest}
@@ -25,7 +25,7 @@ function MaterialUi({ ...rest }: Props): ReactElement {
             viewBox="110 125.24998474121094 600 600"
             preserveAspectRatio="xMidYMid meet"
         >
-            <g transform="translate(0.000000,820.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+            <g transform="translate(0.000000,820.000000) scale(0.100000,-0.100000)" fill={color} stroke="none">
                 <path d="M1100 5027 l0 -1304 373 -216 372 -215 5 864 5 864 744 -430 c409
 -237 747 -430 751 -430 4 0 342 193 751 430 l744 430 3 -423 c2 -357 0 -424
 -12 -433 -8 -5 -345 -201 -750 -435 l-736 -424 0 -441 0 -442 742 -428 c408

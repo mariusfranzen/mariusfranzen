@@ -9,18 +9,14 @@ interface Props {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: "flex",
-        flexDirection: "row"
-    },
-    profile: {
-        maxWidth: "350px"
+        
     }
 }))
 
 const defualtTheme = createMuiTheme({
     palette: {
         primary: {
-            main: "#4db6ac"
+            main: "#fbc02d"
         }
     }
 })
@@ -31,12 +27,8 @@ function App({ }: Props): ReactElement {
     return (
         <ThemeProvider theme={defualtTheme} >
             <div className={classes.root}>
-                <div className={classes.profile}>
-                    <Profile />
-                </div>
-                <div>
-                    <Resume />
-                </div>
+                <Profile />
+                <Resume />
             </div>
         </ThemeProvider>
     )

@@ -1,4 +1,4 @@
-import { makeStyles, Typography } from '@material-ui/core'
+import { Avatar, Card, makeStyles, Typography } from '@material-ui/core'
 import React, { ReactElement } from 'react'
 import Competences from './Competences';
 
@@ -7,19 +7,26 @@ interface Props {
 }
 
 const useStyles = makeStyles((theme) => ({
-    root: {
+    profile: {
+        backgroundColor: theme.palette.primary.main,
+        position: "absolute",
+        width: "50%",
+        minWidth: "300px",
+        height: "100%",
         display: "flex",
         flexDirection: "column",
-        backgroundColor: theme.palette.primary.main
+        alignItems: "center"
     },
-    image: {
-        maxWidth: "75%"
+    avatar: {
+        width: theme.spacing(30),
+        height: theme.spacing(30),
+        boxShadow: "0 5px 20px"
     },
-    inner: {
-        padding: "10px",
-        "& > *": {
-            marginBottom: "5px"
-        }
+    section: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        marginTop: theme.spacing(7)
     }
 }))
 
@@ -27,14 +34,12 @@ function Profile({ }: Props): ReactElement {
     const classes = useStyles();
 
     return (
-        <div className={classes.root}>
-            <img src="../../../images/IMG_1253.15775759.jpg" className={classes.image} />
-            <div className={classes.inner}>
-                <Typography variant="h4">Marius Franzén</Typography>
-                <Typography variant="h6">Full stack utvecklare</Typography>
-                <Typography>Jag har alltid varit väldigt teknikintresserad. Först läste jag till elektriker på gymnasiet, men ändrade sedan inriktning till datorteknik, då jag brinner för datorer och programmering. Jag har programmerat en hel del på min fritid, och även om jag har utbildning i programmering så är jag till största delen självlärd.</Typography>
-                <Competences />
+        <div className={classes.profile}>
+            <div className={classes.section}>
+                <Avatar alt="Marius Franzén" src="../../../images/IMG_1253.15775759.jpg" className={classes.avatar} />
+                <Typography variant="h3" fontWeight="bold" marginTop="20px">Marius Franzén</Typography>
             </div>
+            <Typography variant="h4" marginTop="20px">Full stack och system utvecklare</Typography>
         </div>
     )
 }

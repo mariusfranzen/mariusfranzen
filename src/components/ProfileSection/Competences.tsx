@@ -1,5 +1,5 @@
 import { Grid, makeStyles, Typography } from '@material-ui/core'
-import { PhonelinkOutlined } from '@material-ui/icons'
+import { PhonelinkOutlined, SecurityOutlined, StorageOutlined } from '@material-ui/icons'
 import React, { ReactElement } from 'react'
 import MaterialUi from '../../icons/MaterialUi';
 
@@ -32,6 +32,18 @@ function Competences({ }: Props): ReactElement {
                     <div className={classes.competence}>
                         <MaterialUi />
                         <Typography variant="subtitle2">Material UI</Typography>
+                    </div>
+                </Grid>
+                <Grid item xs={6}>
+                    <div className={classes.competence}>
+                        <StorageOutlined />
+                        <Typography variant="subtitle2">Databashantering</Typography>
+                    </div>
+                </Grid>
+                <Grid item xs={6}>
+                    <div className={classes.competence}>
+                        <SecurityOutlined />
+                        <Typography variant="subtitle2">Säkerhet</Typography>
                     </div>
                 </Grid>
             </Grid>
